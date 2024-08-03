@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -f "{{ .mise.bin_path }}" ];
+then
+    echo "mise already installed"
+    exit 0
+else
+    [ ! -d  "{{ .mise.dir }}" ] && mkdir -p "{{ .mise.dir }}"
+    curl -L "https://github.com/jdx/mise/releases/download/v$VERSION/mise-v$VERSION-macos-arm64" > "{{ .mise.bin_path }}"
+    chmod +x "{{ .mise.bin_path }}"
+fi

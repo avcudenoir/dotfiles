@@ -1,0 +1,5 @@
+[tools]
+awscli = "latest"
+golang = "latest"
+python = "latest"
+pulumi = "latest"

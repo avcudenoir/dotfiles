@@ -10,6 +10,7 @@ alias countFiles='find . -type f | wc -l'
 alias removeOldContainers='docker rm $(docker ps -q -f status=exited)'
 alias removeOldImages='docker rmi $(docker images --filter "dangling=true" -q --no-trunc)'
 alias gbr="git branch | grep -v \"master\" | xargs git branch -D"
+alias c_dryrun="chezmoi git pull -- --autostash --rebase && chezmoi diff"
 
 up() {
 	DEEP=$1

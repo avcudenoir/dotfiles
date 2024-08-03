@@ -1,0 +1,16 @@
+[tools]
+awscli = "latest"
+pulumi = "latest"
+golang = "1.22.5"
+python = "3.12.4"
+erlang = "27.0.1"
+elixir = "1.17.2"
+
+[settings]
+always_keep_download = false        # deleted after install by default
+always_keep_install = false         # deleted on failure by default
+asdf_compat = false # set to true to ensure .tool-versions will be compatible with asdf, see `MISE_ASDF_COMPAT`
+
+[plugins]
+awscli = "https://github.com/MetricMike/asdf-awscli.git"
+pulumi = "https://github.com/canha/asdf-pulumi.git"
