@@ -1,4 +1,2 @@
 homebrew/cask-fonts
 jorgelbg/tap
-linux-noah/noah
-pulumi/tap

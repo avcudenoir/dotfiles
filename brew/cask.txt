@@ -1,0 +1,7 @@
+alt-tab
+font-cascadia-code-pl
+font-cascadia-mono-pl
+font-caskaydia-cove-nerd-font
+kopiaui
+latest
+visual-studio-code

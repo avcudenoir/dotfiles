@@ -1,10 +1,13 @@
 [tools]
-awscli = "latest"
-pulumi = "latest"
-golang = "1.22.5"
-python = "3.12.4"
-erlang = "27.0.1"
-elixir = "1.17.2"
+awscli  = "latest"
+pulumi  = "latest"
+golang  = "1.22.5"
+python  = "3.12.4"
+erlang  = "27.0.1"
+elixir  = "1.17.2"
+age     = "1.2.0"
+colima  = "0.7.0"
+lazygit = "0.43.1" 
 
 [settings]
 always_keep_download = false        # deleted after install by default
