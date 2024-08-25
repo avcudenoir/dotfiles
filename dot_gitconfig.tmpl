@@ -1,0 +1,115 @@
+{{- if contains "HCP-" .chezmoi.hostname -}}
+{{-  template "git_snippet_work.tmpl" . -}}
+{{- else -}}
+{{-  template "git_snippet_personal.tmpl" . -}}
+{{- end -}}
+
+[core]
+editor = zed --wait
+pager = cat
+whitespace = -trailing-space
+trustctime = false
+precomposeunicode = false
+untrackedCache = true
+
+[branch]
+sort = -committerdate
+
+[gpg]
+format = ssh
+
+[commit]
+gpgSign = true
+
+[tag]
+gpgSign = true
+
+[color]
+    # Enable colors in color-supporting terminals
+    ui = auto
+
+[diff]
+# Use better, descriptive initials (c, i, w) instead of a/b.
+mnemonicPrefix = true
+# Show renames/moves as such
+renames = true
+# When using --word-diff, assume --word-diff-regex=.
+wordRegex = .
+# Display submodule-related information (commit listings)
+submodule = log
+# Use VSCode as default diff tool when running `git diff-tool`
+tool = difftastic
+algorithm = histogram
+# uses different colours to highlight lines in diffs that have been “moved”
+colorMoved = default
+
+[fetch]
+# Auto-fetch submodule changes (sadly, won't auto-update)
+recurseSubmodules = on-demand
+prune = true
+prunetags = true
+
+[merge]
+conflictStyle = zdiff3
+
+[mergetool]
+keepBackup = false
+keepTemporaries = false
+writeToTemp = true
+prompt = false
+
+[pull]
+rebase = true
+rebase = merges
+
+[push]
+# push only the current branch to the remote (and create the branch
+# on the remote if it does not already exist there)
+default = current
+
+# push tags missing from remote
+# See https://git-scm.com/docs/git-push#git-push---follow-tags
+followTags = true
+autoSetupRemote = true
+
+[rebase]
+autoStash = true
+autosquash = true
+# https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/
+updateRefs = true
+# don’t allow deleting commits during a rebase
+missingCommitsCheck = error
+
+[rerere]
+enabled = true
+
+[status]
+# Display submodule rev change summaries in status
+submoduleSummary = true
+# Recursively traverse untracked directories to display all contents
+showUntrackedFiles = all
+
+[alias]
+log-graph1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+log-graph2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+co = checkout
+ci = commit
+st = status
+br = branch
+hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+type = cat-file -t
+dump = cat-file -p
+fakap = commit -C HEAD --amend
+force-push = push --force-with-lease
+
+[diff "sopsdiffer"]
+textconv = sops -d
+
+[log]
+date = iso
+
+[init]
+defaultBranch = main
+
+[url "git@github.com:"]
+insteadOf = "gh:"

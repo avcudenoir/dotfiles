@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 FOLDER="$HOME/.tmux/plugins/tpm"
 
 mkdir -p "$(dirname $FOLDER)"
 if [ ! -d "$FOLDER" ] ; then
-    git clone "https://github.com/tmux-plugins/tpm" $FOLDER 
+    git clone "https://github.com/tmux-plugins/tpm" $FOLDER
 fi

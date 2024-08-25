@@ -34,7 +34,7 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=50000
 export SAVEHIST=500000
 
-export EDITOR='nvim'
+export EDITOR='zed --wait'
 
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
@@ -45,6 +45,8 @@ export CARGO_BIN="$HOME/.cargo/bin"
 export AWS_PAGER=""
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 export PATH="$PATH:$GEM_HOME/bin:$GOBIN:$CARGO_BIN"
+
+export TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE=1
 
 [[ -f ~/.shell_extras.sh ]] && source ~/.shell_extras.sh
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
