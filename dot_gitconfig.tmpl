@@ -6,7 +6,6 @@
 
 [core]
 editor = zed --wait
-pager = cat
 whitespace = -trailing-space
 trustctime = false
 precomposeunicode = false
@@ -42,6 +41,15 @@ tool = difftastic
 algorithm = histogram
 # uses different colours to highlight lines in diffs that have been “moved”
 colorMoved = default
+
+[difftool]
+prompt = false
+
+[difftool "difftastic"]
+cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+difftool = true
 
 [fetch]
 # Auto-fetch submodule changes (sadly, won't auto-update)
