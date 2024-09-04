@@ -1,0 +1,62 @@
+#! /usr/bin/env elixir
+
+require Logger
+
+defmodule BrewInstaller do
+  @type component_type :: :tap | :cask | :pkg
+  @type path :: Path.t()
+  @type item :: String.t()
+  @type items :: list(String.t())
+
+  def install(component_type) do
+    path = "{{ .chezmoi.sourceDir }}/brew/#{component_type}.txt"
+    Logger.info("=== Starting installation of brew component: #{component_type}")
+    case File.read(path) do
+      {:ok, content } ->
+        content
+        |> String.split("\n", trim: true)
+        |> run_brew(component_type)
+      {:error, reason} ->
+        Logger.error("Error reading file: #{reason}")
+    end
+    Logger.info("=== Finished installation of brew component: #{component_type}")
+  end
+
+  defp run_brew("", _component_type), do: IO.puts "Nothing to do"
+  defp run_brew(_content, component_type) when component_type not in [:tap, :cask, :pkg], do: IO.puts("Unknown component provided: #{component_type}")
+  defp run_brew(items, component_type) do
+    args = brew_args(component_type)
+    case component_type do
+      :tap ->
+        items |> Enum.each(&system_cmd("brew", args ++ [&1]))
+      _ ->
+        system_cmd("brew", args ++ items)
+    end
+  end
+
+
+  defp system_cmd(cmd, c_args) do
+    case System.cmd(cmd, c_args,
+      stderr_to_stdout: true,
+      into: IO.stream(:stdio, :line),
+      env: [{"TERM", "xterm-256color"}]
+    ) do
+      {_, 0} -> Logger.info("`#{cmd} #{Enum.join(c_args, " ")}` returned successfully")
+      {error, _} -> Logger.error("Issue encountered //  #{error}")
+    end
+  end
+
+  defp brew_args(component_type) do
+    case component_type do
+      :pkg -> ["install", "-q"]
+      :cask -> ["install", "--cask", "-q"]
+      :tap -> ["tap"]
+    end
+  end
+end
+
+BrewInstaller.install(:tap)
+BrewInstaller.install(:cask)
+BrewInstaller.install(:pkg)
+
+Logger.info("=== Brew installer has finished! ===")
