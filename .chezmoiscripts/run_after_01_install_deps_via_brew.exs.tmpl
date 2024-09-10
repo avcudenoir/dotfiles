@@ -22,8 +22,8 @@ defmodule BrewInstaller do
     Logger.info("=== Finished installation of brew component: #{component_type}")
   end
 
-  defp run_brew("", _component_type), do: IO.puts "Nothing to do"
-  defp run_brew(_content, component_type) when component_type not in [:tap, :cask, :pkg], do: IO.puts("Unknown component provided: #{component_type}")
+  defp run_brew("", _component_type), do: Logger.warning("Nothing to do")
+  defp run_brew(_content, component_type) when component_type not in [:tap, :cask, :pkg], do: Logger.error("Unknown component provided: #{component_type}")
   defp run_brew(items, component_type) do
     args = brew_args(component_type)
     case component_type do
