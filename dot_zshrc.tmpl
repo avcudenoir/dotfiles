@@ -53,6 +53,7 @@ export TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE=1
 
 export GPG_TTY=$(tty)
 
+eval "$(direnv hook zsh)"
 eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 eval "$({{ .mise.bin_path }} activate zsh)"
