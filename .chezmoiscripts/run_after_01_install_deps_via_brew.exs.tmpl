@@ -1,4 +1,4 @@
-#! /usr/bin/env elixir
+#!/usr/bin/env -S {{ .mise.bin_path }} x elixir@latest -- elixir
 
 require Logger
 
@@ -42,7 +42,9 @@ defmodule BrewInstaller do
       env: [{"TERM", "xterm-256color"}]
     ) do
       {_, 0} -> Logger.info("`#{cmd} #{Enum.join(c_args, " ")}` returned successfully")
-      {error, _} -> Logger.error("Issue encountered //  #{error}")
+      {_, _} ->
+        Logger.error("Issue encountered!")
+        exit(:shutdown)
     end
   end
 
