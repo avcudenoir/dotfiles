@@ -10,6 +10,7 @@ colima = "0.7.0"
 lazygit = "0.43.1"
 terraform = "1.9.5"
 difftastic = "0.60.0"
+direnv = "2.34.0"
 
 [settings]
 always_keep_download = false # deleted after install by default
