@@ -6,6 +6,7 @@ then
     exit 0
 else
     [ ! -d  "{{ .mise.dir }}" ] && mkdir -p "{{ .mise.dir }}"
-    curl -L "https://github.com/jdx/mise/releases/download/v$VERSION/mise-v$VERSION-macos-arm64" > "{{ .mise.bin_path }}"
+    echo "ℹ️ Downloading mise's binary"
+    curl -L "https://github.com/jdx/mise/releases/download/v{{ .mise.version }}/mise-v{{ .mise.version }}-macos-arm64" > "{{ .mise.bin_path }}"
     chmod +x "{{ .mise.bin_path }}"
 fi
