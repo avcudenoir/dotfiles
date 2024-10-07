@@ -58,6 +58,7 @@ eval "$({{ .mise.bin_path }} activate zsh)"
 {{- if contains "HCP-" .chezmoi.hostname -}}
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
+export TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE=1
 
 {{- else }}
 export LC_ALL="pl_PL.UTF-8"
