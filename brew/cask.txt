@@ -2,6 +2,7 @@ alt-tab
 font-cascadia-code-pl
 font-cascadia-mono-pl
 font-caskaydia-cove-nerd-font
+kitty
 kopiaui
 latest
 visual-studio-code
