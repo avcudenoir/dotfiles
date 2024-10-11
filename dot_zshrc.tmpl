@@ -42,9 +42,6 @@ export CARGO_BIN="$HOME/.cargo/bin"
 export AWS_PAGER=""
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 export PATH="$PATH:$GEM_HOME/bin:$GOBIN:$CARGO_BIN"
-export TERRAGRUNT_TFPATH="$(mise which ~/.local/share/mise/shims/terraform)"
-
-export TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE=1
 
 [[ -f ~/.shell_extras.sh ]] && source ~/.shell_extras.sh
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
@@ -55,6 +52,9 @@ eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
 eval "$({{ .mise.bin_path }} activate zsh)"
 eval "$($(mise which direnv) hook zsh)"
+
+export TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE=1
+export TERRAGRUNT_TFPATH="$(mise which ~/.local/share/mise/shims/terraform)"
 
 {{- if contains "HCP-" .chezmoi.hostname }}
 export LC_ALL="en_US.UTF-8"
