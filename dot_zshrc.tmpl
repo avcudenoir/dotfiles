@@ -42,6 +42,7 @@ export CARGO_BIN="$HOME/.cargo/bin"
 export AWS_PAGER=""
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 export PATH="$PATH:$GEM_HOME/bin:$GOBIN:$CARGO_BIN"
+export TERRAGRUNT_TFPATH="$(mise which ~/.local/share/mise/shims/terraform)"
 
 export TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE=1
 
