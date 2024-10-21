@@ -1,2 +1,4 @@
 # Added by Toolbox App
 export PATH="$PATH:/Users/alanmatuszczak/Library/Application Support/JetBrains/Toolbox/scripts"
+eval "$(${HOME}/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh --shims)"
