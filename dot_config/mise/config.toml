@@ -11,6 +11,7 @@ lazygit = "0.43.1"
 terraform = "1.9.5"
 difftastic = "0.60.0"
 direnv = "2.34.0"
+k9s = "0.32.5"
 
 [settings]
 always_keep_download = false # deleted after install by default
@@ -19,4 +20,5 @@ asdf_compat = true           # set to true to ensure .tool-versions will be comp
 
 [plugins]
 awscli = "https://github.com/MetricMike/asdf-awscli.git"
+k9s = "https://github.com/looztra/asdf-k9s"
 pulumi = "https://github.com/canha/asdf-pulumi.git"
