@@ -6,3 +6,4 @@ kitty
 kopiaui
 latest
 visual-studio-code
+zed
