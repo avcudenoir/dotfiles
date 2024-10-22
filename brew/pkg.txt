@@ -18,6 +18,7 @@ glib
 gnu-getopt
 gnupg
 gnutls
+granted
 htop
 just
 kubectx
