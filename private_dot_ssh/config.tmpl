@@ -1,4 +1,3 @@
-Include /Users/alanmatuszczak/.colima/ssh_config
 {{ if contains "HCP-" .chezmoi.hostname -}}
 Match exec "/usr/local/bin/sft resolve -q  %h"
     ProxyCommand /usr/local/bin/sft proxycommand %h
@@ -7,3 +6,5 @@ Match exec "/usr/local/bin/sft resolve -q  %h"
 Host *
    IdentityAgent ~/.strongbox/agent.sock
 {{- end }}
+
+Include /Users/alanmatuszczak/.colima/ssh_config
