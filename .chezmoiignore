@@ -1,3 +1,7 @@
 key.txt.age
 .chezmoiscripts/.mise.toml
+.chezmoiscripts/go.mod
 brew/
+erl_crash.dump
+helpers/
+scrapped_stuff

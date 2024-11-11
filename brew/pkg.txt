@@ -12,6 +12,8 @@ docker-completion
 exercism
 fontconfig
 freetype
+fuse-t
+fuse-t-sshfs
 fzf
 gettext
 glib

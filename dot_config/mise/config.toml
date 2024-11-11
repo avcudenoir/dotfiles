@@ -1,7 +1,6 @@
 [tools]
 awscli = "latest"
 pulumi = "latest"
-golang = "1.22.5"
 python = "3.12.4"
 erlang = "27.0.1"
 elixir = "1.17.2"
@@ -12,6 +11,7 @@ terraform = "1.9.5"
 difftastic = "0.60.0"
 direnv = "2.34.0"
 k9s = "0.32.5"
+go = "1.23.2"
 
 [settings]
 always_keep_download = false # deleted after install by default

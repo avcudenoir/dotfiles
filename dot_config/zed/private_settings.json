@@ -7,8 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "language_models": {
+    "copilot_chat": {}
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
   "features": {
-    "inline_completion_provider": "none"
+    "inline_completion_provider": "copilot"
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
