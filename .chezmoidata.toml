@@ -1,4 +1,4 @@
 [mise]
 dir = "${HOME}/.local/bin"
 bin_path = "${HOME}/.local/bin/mise"
-version = "2024.10.8"
+version = "2024.12.3"
