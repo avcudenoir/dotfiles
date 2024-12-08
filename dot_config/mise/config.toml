@@ -1,25 +1,27 @@
 [tools]
+difftastic = "0.61.0"
 awscli = "latest"
 pulumi = "latest"
-python = "3.12.4"
+python = "3.13.1"
 erlang = "27.0.1"
 elixir = "1.17.2"
 age = "1.2.0"
-colima = "0.7.0"
-lazygit = "0.43.1"
-terraform = "1.9.5"
-difftastic = "0.60.0"
-direnv = "2.34.0"
-k9s = "0.32.5"
+colima = "0.8.0"
+lazygit = "0.44.1"
+terraform = "1.10.1"
+terragrunt = "0.69.9"
+direnv = "2.35.0"
 go = "1.23.2"
 
 [settings]
-always_keep_download = false # deleted after install by default
-always_keep_install = false  # deleted on failure by default
-asdf_compat = true           # set to true to ensure .tool-versions will be compatible with asdf, see `MISE_ASDF_COMPAT`
+always_keep_download = false  # deleted after install by default
+always_keep_install = false   # deleted on failure by default
+asdf_compat = true            # set to true to ensure .tool-versions will be compatible with asdf, see `MISE_ASDF_COMPAT`
+erlang.compile = false
+not_found_auto_install = true
+# configure messages displayed when entering directories with config files
+status = { missing_tools = "always", show_env = false, show_tools = true }
 
-[plugins]
+[alias]
 awscli = "https://github.com/MetricMike/asdf-awscli.git"
-k9s = "https://github.com/looztra/asdf-k9s"
 pulumi = "https://github.com/canha/asdf-pulumi.git"
-terragrunt = "https://github.com/ohmer/asdf-terragrunt"
