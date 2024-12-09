@@ -1,3 +1,4 @@
+deviceinsight/packages
 jorgelbg/tap
 common-fate/granted
 macos-fuse-t/homebrew-cask
