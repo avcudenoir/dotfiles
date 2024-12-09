@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+DESIRED_SHELL="/opt/homebrew/bin/fish"
+
+if [ -f "/opt/homebrew/bin/fish" ];
+then
+    echo "Going to run (with sudo) the 'ensure_shell' helper for shell ${DESIRED_SHELL}"
+    {{ .mise.bin_path }} x go@latest -- sudo go run {{ .chezmoi.sourceDir }}/helpers/ensure_shell/main.go  -shellpath="${DESIRED_SHELL}" -user={{ .chezmoi.username }}
+else
+    echo "fish not found"
+fi
