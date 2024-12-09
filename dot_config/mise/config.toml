@@ -25,7 +25,7 @@ asdf_compat = true            # set to true to ensure .tool-versions will be com
 erlang.compile = false
 not_found_auto_install = true
 # configure messages displayed when entering directories with config files
-status = { missing_tools = "always", show_env = false, show_tools = true }
+status = { missing_tools = "always", show_env = false, show_tools = false }
 
 [alias]
 awscli = "https://github.com/MetricMike/asdf-awscli.git"
