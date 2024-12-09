@@ -74,3 +74,10 @@ function fbr
     set branch (echo $branches | fzf-tmux +m)
     git checkout (echo $branch | sed "s/.* //" | sed 's#remotes/[^/]*/##')
 end
+
+
+
+### Keybinds
+
+# CTRL+E: fzf's fuzzy directory search
+bind \ce fzf-cd-widget
