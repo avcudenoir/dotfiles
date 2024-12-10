@@ -28,4 +28,18 @@ if status is-interactive
     set -gx GPG_TTY (tty)
 
     fish_add_path $GEM_HOME/bin $GOBIN $CARGO_BIN
+
+    {{- if contains "HCP-" .chezmoi.hostname }}
+    set -gx LC_ALL "en_US.UTF-8"
+    set -gx LANG "en_US.UTF-8"
+    [ -f "$HOME/.w_secrets" ] && source "$HOME/.w_secrets"
+    {{- else }}
+    export LC_ALL "pl_PL.UTF-8"
+    export LANG "pl_PL.UTF-8"
+
+    # https://strongbox.reamaze.com/kb/ssh-agent/ssh-agent
+    set -gx SSH_AUTH_SOCK "$HOME/.strongbox/agent.sock"
+    set -gx AWS_DEFAULT_PROFILE "avcudenoir"
+    [ -f "$HOME/.h_secrets" ] && "source $HOME/.h_secrets"
+    {{ end }}
 end
