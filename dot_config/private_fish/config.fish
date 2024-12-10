@@ -1,6 +1,6 @@
 if status is-interactive
 
-    fish_add_path {$HOME}/.local/bin/
+    fish_add_path /usr/local/bin {$HOME}/.local/bin/
     eval (/opt/homebrew/bin/brew shellenv)
 
     [ -f ~/.shell_extras_fish.sh ] && source ~/.shell_extras_fish.sh
@@ -10,7 +10,6 @@ if status is-interactive
     starship init fish | source
     mise activate fish | source
     direnv hook fish | source
-
 
     set -gx EDITOR 'zed --wait'
     set -gx GOPATH "$HOME/go"
@@ -28,5 +27,5 @@ if status is-interactive
 
     set -gx GPG_TTY (tty)
 
-    fish_add_path $GEM_HOME $GOBIN $CARGO_BIN
+    fish_add_path $GEM_HOME/bin $GOBIN $CARGO_BIN
 end
