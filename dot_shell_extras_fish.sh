@@ -13,6 +13,8 @@ alias removeOldImages='docker rmi (docker images --filter "dangling=true" -q --n
 alias gbr="git branch | grep -v \"master\" | xargs git branch -D"
 alias c_dryrun="chezmoi git pull -- --autostash --rebase && chezmoi diff"
 
+alias assume="source $HOMEBREW_PREFIX/bin/assume.fish"
+
 # Define functions
 function up
     set DEEP $argv[1]
