@@ -1,5 +1,10 @@
 if status is-interactive
 
+    # enable vi mode
+    fish_vi_key_bindings
+    set fish_cursor_default line
+    set fish_cursor_insert block
+
     fish_add_path /usr/local/bin {$HOME}/.local/bin/
     eval (/opt/homebrew/bin/brew shellenv)
 
