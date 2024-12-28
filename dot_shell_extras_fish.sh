@@ -14,6 +14,7 @@ alias gbr="git branch | grep -v \"master\" | xargs git branch -D"
 alias c_dryrun="chezmoi git pull -- --autostash --rebase && chezmoi diff"
 
 alias assume="source $HOMEBREW_PREFIX/bin/assume.fish"
+abbr --add mux zellij
 
 # Define functions
 function up
