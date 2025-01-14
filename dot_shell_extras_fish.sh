@@ -15,6 +15,8 @@ alias c_dryrun="chezmoi git pull -- --autostash --rebase && chezmoi diff"
 
 alias assume="source $HOMEBREW_PREFIX/bin/assume.fish"
 abbr --add mux zellij
+abbr --add k kubectl
+abbr --add kustomize kubectl kustomize
 
 # Define functions
 function up
