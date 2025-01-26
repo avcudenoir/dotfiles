@@ -30,7 +30,7 @@ SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_background:\x1d
 SETUVAR fish_pager_color_completion:b8407f
 SETUVAR fish_pager_color_description:6272a4
-SETUVAR fish_pager_color_prefix:8be9fd
+SETUVAR fish_pager_color_prefix:blue\x1e\x2d\x2dbold
 SETUVAR fish_pager_color_progress:6272a4
 SETUVAR fish_pager_color_secondary_background:\x1d
 SETUVAR fish_pager_color_secondary_completion:\x1d
