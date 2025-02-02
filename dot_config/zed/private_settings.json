@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "vim_mode": false,
+  "show_inline_completions": false,
   "language_models": {
     "copilot_chat": {}
   },
@@ -44,5 +46,10 @@
   "tabs": {
     // Show git status colors in the editor tabs.
     "git_status": true
-  }
+  },
+  "code_actions_on_format": {
+    "source.removeUnusedImports": false
+  },
+  "hard_tabs": false,
+  "base_keymap": "JetBrains"
 }
