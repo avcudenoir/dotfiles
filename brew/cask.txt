@@ -1,9 +1,6 @@
 alt-tab
-font-cascadia-code-pl
-font-cascadia-mono-pl
-font-caskaydia-cove-nerd-font
+font-intone-mono-nerd-font
 kitty
 kopiaui
 latest
-visual-studio-code
 zed

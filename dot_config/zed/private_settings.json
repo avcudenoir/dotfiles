@@ -29,7 +29,7 @@
     "light": "One Light",
     "dark": "Ayu Light"
   },
-  "buffer_font_family": "CaskaydiaCove Nerd Font Mono",
+  "buffer_font_family": "IntoneMono Nerd Font Mono",
   "buffer_font_features": {
     // Disable ligatures:
     "calt": false
