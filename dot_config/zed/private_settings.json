@@ -8,7 +8,7 @@
 // command palette
 {
   "vim_mode": false,
-  "show_inline_completions": false,
+  "show_edit_predictions": false,
   "language_models": {
     "copilot_chat": {}
   },
@@ -20,7 +20,7 @@
     "version": "2"
   },
   "features": {
-    "inline_completion_provider": "copilot"
+    "edit_prediction_provider": "copilot"
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
