@@ -2,7 +2,6 @@
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
-alias suspend='systemctl suspend'
 alias df='df -H'
 alias du='du -H'
 alias genpasswd="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo"
@@ -11,6 +10,7 @@ alias countFiles='find . -type f | wc -l'
 alias removeOldContainers='docker rm (docker ps -q -f status=exited)'
 alias removeOldImages='docker rmi (docker images --filter "dangling=true" -q --no-trunc)'
 alias gbr="git branch | grep -v \"master\" | xargs git branch -D"
+alias gcb="git branch --show-current | pbcopy && echo \"Copied branch name to clipboard: \"(git branch --show-current)\"\""
 alias c_dryrun="chezmoi git pull -- --autostash --rebase && chezmoi diff"
 
 alias assume="source $HOMEBREW_PREFIX/bin/assume.fish"
@@ -52,16 +52,6 @@ function cdf
     cd $dir
 end
 
-function fe
-    set files
-    while read -l line
-        set files $files $line
-    end < (fzf-tmux --query=$argv[1] --multi --select-1 --exit-0)
-    if test -n "$files"
-        $EDITOR $files
-    end
-end
-
 # fkill - kill process
 function fkill
     set pid (ps -ef | sed 1d | fzf -m | awk '{print $2}')
@@ -72,19 +62,14 @@ end
 
 # fbr - checkout git branch (including remote branches), sorted by most recent commit, limit 30 last branches
 function fbr
-    set branches branch
     git fetch
-    set branches (git branch -a)
-    set branch (echo $branches | fzf-tmux +m)
+    set branch (git branch -a | fzf-tmux +m)
     git checkout (echo $branch | sed "s/.* //" | sed 's#remotes/[^/]*/##')
 end
 
-
-
 ### Keybinds
-
-# CTRL+E: fzf's fuzzy directory search
-bind \ce fzf-cd-widget
+bind -M insert \cf fzf-file-widget
+bind -M insert \cg fzf-cd-widget
 
 function fish_greeting
 cat $HOME/.config/fish/greeting.txt

@@ -1,6 +1,0 @@
-alt-tab
-font-intone-mono-nerd-font
-kitty
-kopiaui
-latest
-zed

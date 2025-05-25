@@ -12,7 +12,7 @@
   "language_models": {
     "copilot_chat": {}
   },
-  "assistant": {
+  "agent": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
