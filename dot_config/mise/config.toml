@@ -27,6 +27,7 @@ erlang.compile = false
 not_found_auto_install = true
 # configure messages displayed when entering directories with config files
 status = { missing_tools = "always", show_env = false, show_tools = false }
+idiomatic_version_file_enable_tools = ["terraform"]
 
 [alias]
 awscli = "https://github.com/MetricMike/asdf-awscli.git"
