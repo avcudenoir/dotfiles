@@ -5,3 +5,4 @@ brew/
 erl_crash.dump
 helpers/
 scrapped_stuff
+gui_stuff/
