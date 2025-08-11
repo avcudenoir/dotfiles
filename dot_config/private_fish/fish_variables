@@ -1,10 +1,10 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3800
-SETUVAR fish_color_autosuggestion:666
+SETUVAR fish_color_autosuggestion:808080
 SETUVAR fish_color_cancel:\x2d\x2dreverse
-SETUVAR fish_color_command:normal
-SETUVAR fish_color_comment:888\x1e\x2d\x2ditalics
+SETUVAR fish_color_command:000000
+SETUVAR fish_color_comment:808080\x1e\x2d\x2ditalics
 SETUVAR fish_color_cwd:0A0
 SETUVAR fish_color_cwd_root:A00
 SETUVAR fish_color_end:009900
@@ -17,10 +17,10 @@ SETUVAR fish_color_keyword:00Afb8
 SETUVAR fish_color_match:0AA
 SETUVAR fish_color_normal:B2B2B2
 SETUVAR fish_color_operator:0AA
-SETUVAR fish_color_option:aaaaff
-SETUVAR fish_color_param:ccccff
-SETUVAR fish_color_quote:9ce781
-SETUVAR fish_color_redirection:FFF
+SETUVAR fish_color_option:\x1d
+SETUVAR fish_color_param:0000af
+SETUVAR fish_color_quote:875f00
+SETUVAR fish_color_redirection:af00af
 SETUVAR fish_color_search_match:\x2d\x2dbackground\x3d533
 SETUVAR fish_color_selection:\x2d\x2dbackground\x3dB218B2
 SETUVAR fish_color_status:F22
@@ -28,7 +28,7 @@ SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_background:\x1d
-SETUVAR fish_pager_color_completion:BBB
+SETUVAR fish_pager_color_completion:666666
 SETUVAR fish_pager_color_description:666
 SETUVAR fish_pager_color_prefix:0AA\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:0AA
