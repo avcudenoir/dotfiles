@@ -1,0 +1,32 @@
+# Environment Variables and Exports
+
+export EDITOR='zed --wait'
+
+export GOPATH="$HOME/go"
+export GOBIN="$HOME/go/bin"
+export GEM_HOME="$HOME/.gems"
+export CARGO_BIN="$HOME/.cargo/bin"
+
+export AWS_PAGER=""
+
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+export TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE=1
+export TERRAGRUNT_TFPATH="$(mise which ~/.local/share/mise/shims/terraform)"
+
+export GPG_TTY=$(tty)
+
+export PATH="$PATH:$GEM_HOME/bin:$GOBIN:$CARGO_BIN"
+
+{{- if contains "HCP-" .chezmoi.hostname }}
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+[[ -f "${HOME}/.w_secrets" ]] && source "${HOME}/.w_secrets"
+{{- else }}
+export LC_ALL="pl_PL.UTF-8"
+export LANG="pl_PL.UTF-8"
+
+# https://strongbox.reamaze.com/kb/ssh-agent/ssh-agent
+export SSH_AUTH_SOCK="$HOME/.strongbox/agent.sock"
+export AWS_DEFAULT_PROFILE="avcudenoir"
+[[ -f "${HOME}/.h_secrets" ]] && source "${HOME}/.h_secrets"
+{{ end }}
