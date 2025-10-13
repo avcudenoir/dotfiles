@@ -26,9 +26,6 @@ set -gx AWS_PAGER ""
 set -gx TF_PLUGIN_CACHE_DIR "$HOME/.terraform.d/plugin-cache"
 set -gx TF_PLUGIN_CACHE_MAY_BREAK_DEPENDENCY_LOCK_FILE 1
 set -gx TERRAGRUNT_TFPATH (mise which ~/.local/share/mise/shims/terraform)
-set -gx LC_ALL "pl_PL.UTF-8"
-set -gx LANG "pl_PL.UTF-8"
-
 set -gx GPG_TTY (tty)
 
 fish_add_path $GEM_HOME/bin $GOBIN $CARGO_BIN

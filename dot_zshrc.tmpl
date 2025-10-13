@@ -8,9 +8,9 @@ ZSH_CONFIG_DIR="$HOME/.config/zsh"
 # Source modular configuration files
 ZSH_CONFIG_DIR="$HOME/.config/zsh"
 
+[ -f "$ZSH_CONFIG_DIR/init.zsh" ] && source "$ZSH_CONFIG_DIR/init.zsh"
 [ -f "$ZSH_CONFIG_DIR/options.zsh" ] && source "$ZSH_CONFIG_DIR/options.zsh"
 [ -f "$ZSH_CONFIG_DIR/exports.zsh" ] && source "$ZSH_CONFIG_DIR/exports.zsh"
-[ -f "$ZSH_CONFIG_DIR/init.zsh" ] && source "$ZSH_CONFIG_DIR/init.zsh"
 
 # Source shell extras
 [ -f "$HOME/.shell_extras.sh" ] && source "$HOME/.shell_extras.sh"
