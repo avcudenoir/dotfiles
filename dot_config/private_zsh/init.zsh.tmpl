@@ -5,7 +5,10 @@ eval "$({{ .mise.bin_path }} activate zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # FZF
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+source <(fzf --zsh)
+bindkey '^F' fzf-file-widget
+bindkey '^G' fzf-cd-widget
+
 
 # Atuin
 eval "$(atuin init zsh)"
