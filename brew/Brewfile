@@ -61,7 +61,7 @@ brew "zstd"
 
 # Casks
 cask "alt-tab"
-cask "font-intone-mono-nerd-font"
+cask "font-0xproto-nerd-font"
 cask "kitty"
 cask "kopiaui"
 cask "latest"

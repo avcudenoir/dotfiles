@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "ui_font_family": "0xProto Nerd Font Mono",
+  "helix_mode": false,
   "vim_mode": false,
   "show_edit_predictions": false,
   "language_models": {
@@ -17,7 +19,6 @@
       "provider": "copilot_chat",
       "model": "gpt-4o"
     },
-    "version": "2"
   },
   "features": {
     "edit_prediction_provider": "copilot"
@@ -26,10 +27,10 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Catppuccin Latte",
     "dark": "Ayu Light"
   },
-  "buffer_font_family": "IntoneMono Nerd Font Mono",
+  "buffer_font_family": "0xProto Nerd Font Mono",
   "buffer_font_features": {
     // Disable ligatures:
     "calt": false
