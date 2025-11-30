@@ -28,4 +28,5 @@ clipboard-trim-trailing-spaces = true
 macos-option-as-alt = left
 
 working-directory = home
-shell-integration-features = sudo, ssh-terminfo
+# Disable cursor shell integration feature to let cursor-style setting work
+shell-integration-features = no-cursor
