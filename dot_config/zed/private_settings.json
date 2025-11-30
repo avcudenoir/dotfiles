@@ -7,8 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "ui_font_family": "0xProto Nerd Font Mono",
-  "helix_mode": false,
+  "agent_buffer_font_size": 15.0,
+  "agent_ui_font_size": 15.0,
   "vim_mode": false,
   "show_edit_predictions": false,
   "language_models": {
@@ -24,11 +24,11 @@
     "edit_prediction_provider": "none"
   },
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 13.0,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Ayu Light"
+    "light": "One Light",
+    "dark": "Gruvbox Dark"
   },
   "buffer_font_family": "0xProto Nerd Font Mono",
   "buffer_font_features": {

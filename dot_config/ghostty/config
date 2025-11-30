@@ -1,0 +1,31 @@
+# Ghostty Configuration
+theme = Ghostty Default Style Dark
+
+# Font Configuration
+font-size = 16
+window-inherit-font-size = true
+font-family = "0xProto Nerd Font Mono"
+font-feature = -calt, -liga, -dlig
+
+# Window Configuration
+window-width = 120
+window-height = 40
+
+# Cursor Configuration
+cursor-style = block
+
+# Scrollback
+scrollback-limit = 100000
+
+# Mouse
+mouse-hide-while-typing = true
+focus-follows-mouse = true
+copy-on-select = false
+selection-clear-on-copy = false
+clipboard-trim-trailing-spaces = true
+
+# macOS Specific (based on your config)
+macos-option-as-alt = left
+
+working-directory = home
+shell-integration-features = sudo, ssh-terminfo

@@ -1,5 +1,8 @@
 # Tool Initializations
 
+# Load custom functions
+source "${0:A:h}/functions.zsh"
+
 # Mise
 eval "$({{ .mise.bin_path }} activate zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
