@@ -30,3 +30,6 @@ macos-option-as-alt = left
 working-directory = home
 # Disable cursor shell integration feature to let cursor-style setting work
 shell-integration-features = no-cursor
+
+unfocused-split-opacity = 0.75
+split-divider-color = #DC143C
