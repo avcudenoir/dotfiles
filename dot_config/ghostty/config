@@ -29,7 +29,7 @@ macos-option-as-alt = left
 
 working-directory = home
 # Disable cursor shell integration feature to let cursor-style setting work
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,ssh-terminfo,ssh-env
 
 unfocused-split-opacity = 0.75
 split-divider-color = #DC143C
