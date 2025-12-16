@@ -15,7 +15,7 @@ window-height = 40
 cursor-style = block
 
 # Scrollback
-scrollback-limit = 100000
+scrollback-limit = 9000000
 
 # Mouse
 mouse-hide-while-typing = true

@@ -52,5 +52,5 @@
     "source.removeUnusedImports": false
   },
   "hard_tabs": false,
-  "base_keymap": "JetBrains"
+  "base_keymap": "Cursor"
 }
