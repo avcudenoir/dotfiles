@@ -32,6 +32,6 @@ not_found_auto_install = true
 status = { missing_tools = "always", show_env = false, show_tools = false }
 idiomatic_version_file_enable_tools = ["terraform"]
 
-[alias]
+[tool_alias]
 awscli = "https://github.com/MetricMike/asdf-awscli.git"
 pulumi = "https://github.com/canha/asdf-pulumi.git"
