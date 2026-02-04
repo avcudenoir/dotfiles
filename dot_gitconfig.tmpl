@@ -57,6 +57,7 @@ difftool = true
 recurseSubmodules = on-demand
 prune = true
 prunetags = true
+tags = true
 
 [merge]
 conflictStyle = zdiff3
@@ -122,7 +123,3 @@ defaultBranch = main
 
 [url "git@github.com:"]
 insteadOf = "gh:"
-
-[remote "origin"]
-    tagOpt = --tags
-    fetch = +refs/tags/*:refs/tags/*
