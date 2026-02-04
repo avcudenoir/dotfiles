@@ -22,14 +22,16 @@ source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
+autoload -Uz compinit bashcompinit
+if [[ -n ${HOME}/.zcompdump(#qN.mh+24) ]]; then
+  compinit -i
+  bashcompinit
+else
+  compinit -C -i
+  bashcompinit -C -i
+fi
+
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(atuin init zsh)"
-
-# only run full compinit once per day
-autoload -Uz compinit
-if [[ -n ${HOME}/.zcompdump(#qN.mh+24) ]]; then
-  compinit -i
-else
-  compinit -C -i
-fi
+eval "$(kubesess init zsh)"

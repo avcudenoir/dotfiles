@@ -70,7 +70,3 @@ end
 ### Keybinds
 bind -M insert \cf fzf-file-widget
 bind -M insert \cg fzf-cd-widget
-
-function fish_greeting
-cat $HOME/.config/fish/greeting.txt
-end

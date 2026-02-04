@@ -1,0 +1,15 @@
+# Main ZSH Configuration
+ZSH_CONFIG_DIR="$HOME/.config/zsh"
+
+# Source modular configuration files
+ZSH_CONFIG_DIR="$HOME/.config/zsh"
+
+for config in "$ZSH_CONFIG_DIR"/*.zsh; do
+  [ -f "$config" ] && source "$config"
+done
+
+# Source shell extras
+[ -f "$HOME/.shell_extras.sh" ] && source "$HOME/.shell_extras.sh"
+
+
+print -r -- $'┬─┬﻿ ノ( ゜-゜ノ)            (ノ ゜Д゜)ノ ︵ ┻━┻\n'

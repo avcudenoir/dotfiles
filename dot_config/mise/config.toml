@@ -21,6 +21,7 @@ terragrunt = "0.69.9"
 tflint = "0.52.0"
 trivy = "0.53.0"
 zellij = "latest"
+rust = "prefix:1"
 
 [settings]
 always_keep_download = false  # deleted after install by default
